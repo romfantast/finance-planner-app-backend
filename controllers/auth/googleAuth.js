@@ -2,7 +2,7 @@ const { User } = require('../../models/users');
 const jwt = require('jsonwebtoken');
 require('dotenv').config();
 
-const { SECRET_KEY, FRONTEND_URL } = process.env;
+const { SECRET_KEY } = process.env;
 
 const googleAuth = async (req, res) => {
   const { _id: id } = req.user;
@@ -14,7 +14,8 @@ const googleAuth = async (req, res) => {
   await User.findByIdAndUpdate(id, { token });
 
   res.redirect(
-    `${FRONTEND_URL}?email=${req.user.email}&password=${req.user.password}`
+    // `${FRONTEND_URL}?email=${req.user.email}&password=${req.user.password}`
+    `https://finance-planner-app.netlify.app?email=${req.user.email}&password=${req.user.password}`
   );
 };
 
