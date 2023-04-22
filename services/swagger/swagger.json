@@ -2,7 +2,7 @@
   "openapi": "3.0.0",
   "info": {
     "title": "Finance-app",
-    "description": "Its API for web aplication Finance-app",
+    "description": "Finance-planner-app api",
     "version": "2.2.2"
   },
   "servers": [
