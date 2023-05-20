@@ -15,7 +15,7 @@ const googleAuth = async (req, res) => {
 
   res.redirect(
     // `${FRONTEND_URL}?email=${req.user.email}&password=${req.user.password}`
-    `https://finance-planner-app.netlify.app?email=${req.user.email}&password=${req.user.password}`
+    `https://finance-planner-app-frontend.netlify.app/?email=${req.user.email}&password=${req.user.password}`
   );
 };
 
